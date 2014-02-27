@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="styles/main.css" rel="stylesheet">
+        <!-- build:js scripts/options.js -->
+        <script src="scripts/options.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!-- CHROME EXTENSION OPTION -->
+        <img src="images/icon-128.png">
+        <h1>dalton</h1>
+        <div class="setting">
+          <span>When the dalton button is clicked: </span>
+          <div class="options">
+            <div class="option">
+              <input type="radio" name="buttonAction" value="popup" id="ba-popup" checked>
+              <label for="ba-popup">Show a pop up to select the kind of color blindness to simulate.</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="buttonAction" value="preset" id="ba-preset">
+              <label for="ba-preset">Simulate this: </label>
+              <select name="preset-choice">
+                <option selected>Protanopia</option>
+                <option>Protanomaly</option>
+                <option>Deuteranopia</option>
+                <option>Deuteranomaly</option>
+                <option>Tritanopia</option>
+                <option>Tritanomaly</option>
+                <option>Achromatopsia</option>
+                <option>Achromatomaly</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
