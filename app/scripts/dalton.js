@@ -81,10 +81,10 @@ var dalton = {
 };
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
-  chrome.storage.sync.get('preset-choice', function(settings){
+  if( sender.id == chrome.runtime.id ){
     $('*').each(function(){
-      dalton.applyColorBlindness($(this), settings['preset-choice']);
+      dalton.applyColorBlindness($(this), message);
     });
-  });
-  sendResponse(true);
+    sendResponse(true);
+  }
 });

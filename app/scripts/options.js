@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function(){
     for( i = 0; i < inputs.length; i++ ){
       if( settings.hasOwnProperty(inputs[i].name) ){
         inputs[i].checked = settings[inputs[i].name] == inputs[i].value;
+      } else {
+        settings[inputs[i].name] = inputs[i].value;
+        chrome.storage.sync.set(settings);
       }
       inputs[i].addEventListener('change', function(e){
         settings[e.target.name] = e.target.value;
@@ -19,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function(){
     for( i = 0; i < selects.length; i++ ){
       if( settings.hasOwnProperty(selects[i].name) ){
         selects[i].value = settings[selects[i].name];
+      } else {
+        settings[selects[i].name] = selects[i].value;
+        chrome.storage.sync.set(settings);
       }
       selects[i].addEventListener('change', function(e){
         settings[e.target.name] = e.target.value;

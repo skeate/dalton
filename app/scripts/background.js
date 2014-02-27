@@ -1,11 +1,13 @@
 'use strict';
 
 chrome.browserAction.onClicked.addListener(function(tab){
-  chrome.tabs.sendMessage(tab.id, "simulate", function(res){
-    console.log(res);
+  chrome.storage.sync.get('preset-choice', function(settings){
+    chrome.tabs.sendMessage(tab.id, settings['preset-choice']);
   });
 });
 
 chrome.storage.sync.get('buttonAction',function(settings){
-  if( settings.buttonAction == "popup" ) chrome.browserAction.setPopup({popup:"popup.html"});
+  if( !settings.hasOwnProperty('buttonAction') || settings.buttonAction == "popup" ){
+    chrome.browserAction.setPopup({popup:"popup.html"});
+  }
 });
