@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "manifest_version": 2,
     "description": "__MSG_appDescription__",
     "icons": {
@@ -10,33 +10,34 @@
     "default_locale": "en",
     "background": {
         "scripts": [
+            "scripts/dalton.js",
             "scripts/background.js"
         ],
         "persistent": false
     },
-  "browser_action": {
-    "default_icon": {
-      "19": "images/icon-19.png",
-      "38": "images/icon-38.png"
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon-19.png",
+            "38": "images/icon-38.png"
+        },
+        "default_title": "dalton"
     },
-    "default_title": "dalton"
-  },
-  "options_page": "options.html",
-  "permissions": [
-    "storage",
-    "activeTab"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
+    "options_page": "options.html",
+    "permissions": [
+        "storage",
         "*://*/*"
-      ],
-      "js": [
-        "bower_components/jquery/dist/jquery.js",
-        "scripts/dalton.js"
-      ],
-      "run_at": "document_end",
-      "all_frames": true
-    }
-  ]
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "bower_components/jquery/dist/jquery.js",
+                "scripts/dalton.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ]
 }
