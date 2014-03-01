@@ -5,19 +5,66 @@
         <!-- build:js scripts/popup.js -->
         <script src="scripts/popup.js"></script>
         <!-- endbuild -->
+        <style type="text/css" media="all">
+            body{
+                width: 400px;
+            }
+            img{ float: right; }
+            div{
+                height: 50px;
+                line-height: 50px;
+                text-align: right;
+            }
+        </style>
     </head>
     <body>
         <!-- CHROME EXTENSION POPUP -->
         <form name="selection">
-            <input type="radio" name="type" id="Normal"><label for="Normal">Normal</label>
-            <input type="radio" name="type" id="Protanopia" /><label for="Protanopia">Protanopia</label>
-            <input type="radio" name="type" id="Protanomaly" /><label for="Protanomaly">Protanomaly</label>
-            <input type="radio" name="type" id="Deuteranopia" /><label for="Deuteranopia">Deuteranopia</label>
-            <input type="radio" name="type" id="Deuteranomaly" /><label for="Deuteranomaly">Deuteranomaly</label>
-            <input type="radio" name="type" id="Tritanopia" /><label for="Tritanopia">Tritanopia</label>
-            <input type="radio" name="type" id="Tritanomaly" /><label for="Tritanomaly">Tritanomaly</label>
-            <input type="radio" name="type" id="Achromatopsia" /><label for="Achromatopsia">Achromatopsia</label>
-            <input type="radio" name="type" id="Achromatomaly" /><label for="Achromatomaly">Achromatomaly</label>
+            <div>
+                <label for="Normal">Normal</label>
+                <input type="radio" name="type" id="Normal" checked>
+                <img src="images/Normal.png">
+            </div>
+            <div>
+                <label for="Protanopia">Protanopia</label>
+                <input type="radio" name="type" id="Protanopia" />
+                <img src="images/Protanopia.png">
+            </div>
+            <div>
+                <label for="Protanomaly">Protanomaly</label>
+                <input type="radio" name="type" id="Protanomaly" />
+                <img src="images/Protanomaly.png">
+            </div>
+            <div>
+                <label for="Deuteranopia">Deuteranopia</label>
+                <input type="radio" name="type" id="Deuteranopia" />
+                <img src="images/Deuteranopia.png">
+            </div>
+            <div>
+                <label for="Deuteranomaly">Deuteranomaly</label>
+                <input type="radio" name="type" id="Deuteranomaly" />
+                <img src="images/Deuteranomaly.png">
+            </div>
+            <div>
+                <label for="Tritanopia">Tritanopia</label>
+                <input type="radio" name="type" id="Tritanopia" />
+                <img src="images/Tritanopia.png">
+            </div>
+            <div>
+                <label for="Tritanomaly">Tritanomaly</label>
+                <input type="radio" name="type" id="Tritanomaly" />
+                <img src="images/Tritanomaly.png">
+            </div>
+            <div>
+                <label for="Achromatopsia">Achromatopsia</label>
+                <input type="radio" name="type" id="Achromatopsia" />
+                <img src="images/Achromatopsia.png">
+            </div>
+            <div>
+                <label for="Achromatomaly">Achromatomaly</label>
+                <input type="radio" name="type" id="Achromatomaly" />
+                <img src="images/Achromatomaly.png">
+            </div>
         </form>
     </body>
 </html>

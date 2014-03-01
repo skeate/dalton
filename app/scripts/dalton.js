@@ -81,7 +81,7 @@ var dalton = {
                     return func.apply(this, arguments);
                 }
             };
-        })( urls.length, function(){
+        })( urls.length + 1, function(){
             cb(v);
         });
         var piw = function(url){
@@ -93,6 +93,7 @@ var dalton = {
         for( var i = 0; i < urls.length; i++ ){
             piw(urls[i]);
         }
+        done();
     },
 
     processImage: function(url, cb){
@@ -148,7 +149,8 @@ var dalton = {
                 chrome.runtime.sendMessage({
                     action: 'process_background_image',
                     value: bgi,
-                    index: index
+                    index: index,
+                    type: type
                 }, function(){});
             }
 
@@ -158,7 +160,8 @@ var dalton = {
                 chrome.runtime.sendMessage({
                     action: 'get_image_data_url',
                     url: url,
-                    index: index
+                    index: index,
+                    type: type
                 }, function(){});
             }
         }

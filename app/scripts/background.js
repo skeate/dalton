@@ -3,7 +3,6 @@
 
 chrome.browserAction.onClicked.addListener(function(tab){
     chrome.storage.sync.get('preset-choice', function(settings){
-        dalton.type = settings['preset-choice'];
         chrome.tabs.sendMessage(tab.id, {
             action: 'simulate',
             type: settings['preset-choice']
@@ -12,6 +11,7 @@ chrome.browserAction.onClicked.addListener(function(tab){
 });
 
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse){
+    dalton.type = msg.type;
     if( msg.action === 'get_image_data_url' ){
         dalton.processImage(msg.url, function(dataURL){
             chrome.tabs.sendMessage(sender.tab.id, {
