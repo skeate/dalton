@@ -1,18 +1,19 @@
 'use strict';
 
-function onChange(e){
+function onClick(e){
     var type = e.target.id;
     chrome.tabs.getSelected(function(tab){
         chrome.tabs.sendMessage(tab.id, {
             action: 'simulate',
             type: type
         });
+        window.close();
     });
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-    var types = document.getElementsByName('type');
+    var types = document.getElementsByTagName('button');
     for( var i = 0; i < types.length; i++ ){
-        types[i].addEventListener('change', onChange );
+        types[i].addEventListener('click', onClick );
     }
 });
