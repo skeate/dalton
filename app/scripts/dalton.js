@@ -1,6 +1,9 @@
 /*global $: false */
 'use strict';
 
+// some code (ColorMatrix function, values in Types matrices) from
+// http://web.archive.org/web/20080913204136/http://colorjack.blogspot.com/2008/04/color-blindness-simulation_19.html
+
 var dalton = {
     ColorMatrix: function(o, m) {
         var a, b, fu, g, r;
