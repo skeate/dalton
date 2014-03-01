@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "dalton",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "View websites through the eyes of the colorblind.",
+    "description": "The description of the application"
+  }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="styles/main.css" rel="stylesheet">
+        <script src="scripts/popup.js"></script>
+        <style type="text/css" media="all">
+            body{
+                width: 250px;
+            }
+            img{ float: right; }
+            button{
+                height: 50px;
+                width: 250px;
+                line-height: 50px;
+                text-align: center;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                //text-shadow: 0px 0px 5px rgba(0,0,0,1);
+                text-shadow:
+                     0    0   5px #000,
+                    -1px -1px 0 #000,
+                     1px -1px 0 #000,
+                    -1px  1px 0 #000,
+                     1px  1px 0 #000;
+            }
+            #Normal{
+                background-image: url('images/Normal.png');
+            }
+            #Protanopia{
+                background-image: url('images/Protanopia.png');
+            }
+            #Protanomaly{
+                background-image: url('images/Protanomaly.png');
+            }
+            #Deuteranopia{
+                background-image: url('images/Deuteranopia.png');
+            }
+            #Deuteranomaly{
+                background-image: url('images/Deuteranomaly.png');
+            }
+            #Tritanopia{
+                background-image: url('images/Tritanopia.png');
+            }
+            #Tritanomaly{
+                background-image: url('images/Tritanomaly.png');
+            }
+            #Achromatopsia{
+                background-image: url('images/Achromatopsia.png');
+            }
+            #Achromatomaly{
+                background-image: url('images/Achromatomaly.png');
+            }
+        </style>
+    </head>
+    <body>
+        <!-- CHROME EXTENSION POPUP -->
+        <button id="Normal">Normal</button>
+        <button id="Protanopia">Protanopia</button>
+        <button id="Protanomaly">Protanomaly</button>
+        <button id="Deuteranopia">Deuteranopia</button>
+        <button id="Deuteranomaly">Deuteranomaly</button>
+        <button id="Tritanopia">Tritanopia</button>
+        <button id="Tritanomaly">Tritanomaly</button>
+        <button id="Achromatopsia">Achromatopsia</button>
+        <button id="Achromatomaly">Achromatomaly</button>
+    </body>
+</html>
