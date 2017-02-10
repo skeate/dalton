@@ -1,5 +1,7 @@
 # Dalton
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/skeate/dalton.svg)](https://greenkeeper.io/)
+
 Dalton is a Chrome extension to simulate various types of color blindness.
 
 ## Project Setup
